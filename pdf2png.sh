@@ -202,14 +202,15 @@ echo "Output image size: $RESIZE"
 
 j=1
 N=$((PAGE_STOP-PAGE_START+1))
-for i in `seq $PAGE_START $PAGE_STOP`
+
+for ((i=$PAGE_START; i < $PAGE_STOP ; i++));
 do
 	i=`printf %04u $i`
 	echo "Processing page no. $i ($j/$N)"
 	TMP=/tmp/tmp-${i}.png
 	gs -q -sDEVICE=png16m -dBATCH -dNOPAUSE \
 		-dFirstPage=$i -dLastPage=$i -r$GS_DPI \
-		 -sOutputFile=$TMP "$INPUT" > /dev/null 2>&1
+		 -sOutputFile=$TMP "$INPUT" 
 
 	test_return $? "GhostScript conversion"	
 
@@ -222,5 +223,3 @@ do
 	rm -f $TMP
 	: $((j++))
 done
-
-
