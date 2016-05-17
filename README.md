@@ -26,7 +26,7 @@ What this does is convert each page of the pdf to PNGs
 Installation
 -------------
 
-1. You could have ImageMagick installed but I have already added convert.exe in the project folder.
+1. You could have [ImageMagick](http://www.imagemagick.org/script/index.php) installed but I have already added convert.exe in the project folder.
 	* (This converts many image formats into bmp)
 2. You could have Ghostscript installed but I have already added gs.exe in the project folder.
 3. You should probably add this to your path to use it without having to copy it to every folder you want to use it on.
