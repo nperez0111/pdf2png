@@ -1,4 +1,4 @@
-PDFToPNG - A simple batch / bash script to convert pdfs to multiple PNGs
+[PDFToPNG](http://d.klwe.info/pdf2png/) - A simple batch / bash script to convert pdfs to multiple PNGs
 ============================================================
 
 Usage
